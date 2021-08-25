@@ -1,0 +1,11 @@
+.titulo{
+  background: rgb(209, 208, 208);
+  padding: 10px;
+}
+.opcao{
+  padding: 10px;
+}
+
+.opcao > label{
+  margin-left: 5px;
+}

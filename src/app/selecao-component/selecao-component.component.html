@@ -1,0 +1,10 @@
+<div class="titulo">
+  <h3>{{titulo}}</h3>
+  <p *ngIf="escolhaAte >= 2"> Escolha até {{escolhaAte}} <span *ngIf='limite > 0'>( {{limite}} selecionado )</span></p>
+</div>
+
+<div class="opcao" *ngFor="let opcao of opcoes">
+  <input ngModel #checked id="{{opcao}}" [disabled]="(limite == escolhaAte && !checked.checked) && (escolhaAte > 2)"
+    (change)="seleciona($event)" [type]="escolhaAte > 2 ? 'checkbox' : 'radio'" name="opcao">
+  <label [class.disable]="checked.disabled" for="{{opcao}}">{{opcao}}</label>
+</div>
